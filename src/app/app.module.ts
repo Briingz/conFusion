@@ -28,6 +28,8 @@ import { LeaderService } from './services/leader.service';
 import { LoginComponent } from './login/login.component';
 
 
+import { MatDialogModule } from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,9 +57,15 @@ import { LoginComponent } from './login/login.component';
 
     AppRoutingModule,
 
+    MatDialogModule,
+
   ],
   providers: [DishService, PromotionService,LeaderService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
+  entryComponents: [
+    LoginComponent
+],
 })
 
 
@@ -66,6 +74,4 @@ export class AppModule { }
 
 
 
-
-  
 
